@@ -1,7 +1,7 @@
 FROM quay.io/keycloak/keycloak:22.0.5
 
 ENV TZ=Europe/Moscow
-RUN cp /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN sudo cp /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
